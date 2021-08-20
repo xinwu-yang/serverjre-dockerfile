@@ -1,6 +1,8 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y libssl-dev libapr1 libapr1-dev vim
+RUN apt-get update && apt-get upgrade -y && apt-get install -y libssl-dev libapr1 libapr1-dev vim fontconfig
+
+RUN fc-cache -f -v
 
 ADD lib/* /usr/lib/x86_64-linux-gnu/
 
