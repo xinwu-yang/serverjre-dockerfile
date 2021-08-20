@@ -6,6 +6,5 @@ serverjre 是一个集成了APR和Tomcat Native运行环境的java运行环境
 docker build -t serverjre:11 .
 
 # jdk11现在不包含在容器中，需要挂载
-docker run -v /home/yxw/docker/jdk11 /usr/local/jdk -it serverjre:11 /bin/bash
+docker run -d -p 8080:8080 -v /root/jdk-11.0.12+7:/usr/local/jdk -v /root/system-quick-start-1.0.0.jar:/app/app.jar --name app serverjre:11
 ```
-
