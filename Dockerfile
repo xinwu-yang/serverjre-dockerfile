@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 ENV TZ Asia/Shanghai
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y libssl-dev libapr1 libapr1-dev vim fontconfig
+RUN apt-get update && apt-get upgrade -y && apt-get install -y libssl-dev libapr1 libapr1-dev vim fontconfig tzdata
 
 RUN fc-cache -f -v
 
