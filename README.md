@@ -9,6 +9,9 @@ docker build -t registry.cn-chengdu.aliyuncs.com/yousinnmu/serverjre:env .
 # 拉取
 docker pull registry.cn-chengdu.aliyuncs.com/yousinnmu/serverjre:env
 
+# 设置软连接
+ln -sf your.app.jar app.jar
+
 # 启动：JRE现在不包含在容器中，需要挂载
-docker run -d -p 8080:8080 -v /root/jdk1.8.0_311:/usr/local/jdk -v /app:/app --restart always --name app registry.cn-chengdu.aliyuncs.com/yousinnmu/serverjre:env
+docker run -d -p 8080:8080 -v /your/jdk:/usr/local/jdk -v /your/app/path:/app --restart always --name app registry.cn-chengdu.aliyuncs.com/yousinnmu/serverjre:env
 ```
