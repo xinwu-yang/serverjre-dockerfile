@@ -1,12 +1,14 @@
-FROM ubuntu:22.04
+FROM centos:7
 
 ENV TZ Asia/Shanghai
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y libssl-dev libapr1 libapr1-dev vim fontconfig tzdata
+RUN yum install -y fontconfig
+
+ADD lib/* /usr/lib64/
+
+ADD font/* /usr/share/fonts/chinese/
 
 RUN fc-cache -f -v
-
-ADD lib/* /usr/lib/x86_64-linux-gnu/
 
 VOLUME [ "/usr/local/jdk", "/app" ]
 
@@ -16,7 +18,7 @@ ENV CLASSPATH $JAVA_HOME/bin
 
 ENV PATH .:$JAVA_HOME/bin:$PATH
 
-ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8 -Duser.timezone=GMT+8 -Duser.language=en -Duser.country=US -Djava.library.path=/usr/lib/x86_64-linux-gnu
+ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8 -Duser.timezone=GMT+8 -Duser.language=en -Duser.country=US -Djava.library.path=/usr/lib64
 
 WORKDIR '/app'
 
