@@ -1,16 +1,16 @@
 # serverjre
 
-serverjre 是一个集成了 **Apache Portable Runtime**、**Apache Tomcat Native** 以及中文字体的Java运行环境镜像。
+serverjre 是一个以centos7为基础，集成了 **Apache Portable Runtime**、**Apache Tomcat Native** 以及中文字体的Java运行环境镜像。
 
-##### lib
+##### libs
 
 - Apache Tomcat Native 1.2.34
 - Apache Portable Runtime 1.7.0
 - OpenSSL 1.0.2k
 
-#### 字体
+#### fonts
 
-- 宋体
+- simsun
 
 ##### quick start:
 
