@@ -1,6 +1,6 @@
 # serverjre
 
-serverjre 是一个以centos7为基础，集成了 **Apache Portable Runtime**、**Apache Tomcat Native** 以及中文字体的Java运行环境镜像。
+serverjre 是一个以 **CentOS 7.9.2009** 为基础，集成了 **Apache Portable Runtime**、**Apache Tomcat Native** 以及中文字体的Java运行环境镜像。
 
 ##### libs
 
