@@ -8,7 +8,7 @@
 dlname='libtcnative-1.so.0'
 
 # Names of this library.
-library_names='libtcnative-1.so.0.2.34 libtcnative-1.so.0 libtcnative-1.so'
+library_names='libtcnative-1.so.0.2.35 libtcnative-1.so.0 libtcnative-1.so'
 
 # The name of the static archive.
 old_library='libtcnative-1.a'
@@ -17,7 +17,7 @@ old_library='libtcnative-1.a'
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -lssl -lcrypto /usr/local/apr/lib/libapr-1.la -lrt -lcrypt -lpthread -ldl'
+dependency_libs=' -lssl -lcrypto /usr/lib64/libapr-1.la -lpthread -ldl'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -25,7 +25,7 @@ weak_library_names=''
 # Version information for libtcnative-1.
 current=2
 age=2
-revision=34
+revision=35
 
 # Is this an already installed library?
 installed=yes

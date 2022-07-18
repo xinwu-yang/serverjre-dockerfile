@@ -1,8 +1,8 @@
-FROM centos:7
+FROM rockylinux:8.6
 
 ENV TZ Asia/Shanghai
 
-RUN yum install -y fontconfig
+RUN yum install -y fontconfig apr-devel openssl-devel
 
 ADD lib/* /usr/lib64/
 
